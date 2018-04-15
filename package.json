@@ -1,0 +1,29 @@
+{
+  "name": "jest-browserstack",
+  "version": "0.0.1",
+  "description": "Use Jest to run tests with browserstack",
+  "main": "modules/JestBrowserstackDriver.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadl3r/jest-browserstack.git"
+  },
+  "author": "Julien Darsel",
+  "license": "MIT",
+  "dependencies": {
+    "jest-environment-node": "~22.1.4",
+    "selenium-webdriver": "~4.0.0-alpha.1"
+  },
+  "peerDependencies": {
+    "jest": "^22.1.4"
+  },
+  "devDependencies": {
+    "jest": "^22.1.4"
+  },
+  "bugs": {
+    "url": "https://github.com/sadl3r/jest-browserstack/issues"
+  },
+  "homepage": "https://github.com/sadl3r/jest-browserstack#readme"
+}
