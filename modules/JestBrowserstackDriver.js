@@ -5,9 +5,9 @@ class WebDriverEnvironment extends NodeEnvironment {
   constructor(config) {
     super(config);
     const options = config.testEnvironmentOptions || {};
-    
+
     this.browserName = options.browser || 'chrome';
-    this.capabilities = config.capabilities || {};
+    this.capabilities = options.capabilities || {};
     this.seleniumAddress = options.seleniumAddress || null;
   }
 
@@ -19,7 +19,7 @@ class WebDriverEnvironment extends NodeEnvironment {
       driver = driver.usingServer(this.seleniumAddress);
     }
   
-    driver = await driver.forBrowser(this.browserName).withCapabilities(this.capabilities).build();
+     driver = await driver.withCapabilities(this.capabilities).forBrowser(this.browserName).build();
 
     this.driver = driver;
 
